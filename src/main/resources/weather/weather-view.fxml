@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="weather.controller.WeatherController">
+    <top>
+        <VBox spacing="8" styleClass="header-panel">
+            <Label text="FXML Weather View" styleClass="title"/>
+        </VBox>
+    </top>
+
+    <!-- the city selection & labels-->
+    <left>
+        <VBox spacing="15" styleClass="content-panel" prefWidth="360">
+            <ComboBox fx:id="cityBox" promptText="Choose a city" onAction="#handleCitySelected"/>
+            <Label fx:id="detailLabel" text="Pick a city after refreshing."/>
+            <Label fx:id="statusLabel" text="Weather status" styleClass="status-label"/>
+            <VBox fx:id="progressBox" spacing="8"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="15" styleClass="content-panel">
+            <!-- Starter chart structure. Students add/update its data in the controller. -->
+            <BarChart fx:id="temperatureChart" title="City Temperatures (°F)" animated="false">
+                <xAxis>
+                    <CategoryAxis label="City"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Temperature (°F)"/>
+                </yAxis>
+            </BarChart>
+
+            <!-- TODO: Add city detail controls and a second graphical representation. -->
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" styleClass="button-bar">
+            <Button text="Refresh Weather"
+                    onAction="#handleRefresh"
+                    styleClass="refresh-button"/>
+            <!-- TODO: Add other required interaction controls. -->
+            <Button text="Back" onAction="#handleBack"/>
+        </HBox>
+    </bottom>
+</BorderPane>

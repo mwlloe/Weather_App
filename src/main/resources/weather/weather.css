@@ -1,0 +1,96 @@
+/* background and default font for the whole window */
+.root {
+    -fx-font-family: "Constantia";
+    -fx-font-size: 14px;
+    -fx-background-color: linear-gradient(to bottom, #b3e2ff, #eaf6ff);
+}
+
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #203469;
+}
+
+.home-panel,
+.content-panel,
+.header-panel,
+.button-bar {
+    -fx-padding: 20px;
+}
+
+/* the left side panel with the controls */
+.content-panel {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* all buttons */
+.button {
+    -fx-background-color: #d3d3d3;
+    -fx-text-fill: rgb(0, 0, 0);
+    -fx-background-radius: 8;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #888888;
+}
+
+/* refresh button gets its own color (this has to come AFTER .button) */
+.refresh-button {
+    -fx-font-weight: bold;
+    -fx-background-color: #22fc2d;
+}
+
+.refresh-button:hover {
+    -fx-background-color: #19a720;
+}
+
+.status-label {
+    -fx-padding: 8px;
+    -fx-font-size: 15px;
+}
+
+/* chart */
+.chart-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.chart-plot-background {
+    -fx-background-color: white;
+}
+
+.default-color0.chart-bar {
+    -fx-bar-fill: #000000;
+}
+
+/* progress bars (-fx-accent is the color of the filled part) */
+.progress-bar {
+    -fx-accent: #3b82f6;
+}
+
+/* temperature colors, these have to stay at the bottom */
+.cold {
+    -fx-accent: #3b82f6;
+    -fx-text-fill: #1d4ed8;
+}
+
+.mild {
+    -fx-accent: #14b8a6;
+    -fx-text-fill: #0f766e;
+}
+
+.warm {
+    -fx-accent: #f59e0b;
+    -fx-text-fill: #b45309;
+}
+
+.hot {
+    -fx-accent: #ef4444;
+    -fx-text-fill: #b91c1c;
+}
+/* TODO: Students should expand the stylesheet.
+   Possible classes: .city-card, .cold, .mild, .warm, .hot */
